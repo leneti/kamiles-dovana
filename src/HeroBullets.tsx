@@ -30,7 +30,7 @@ export function HeroBullets() {
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
-            Su<span className={classes.highlight}>gimtadieniuu,</span> Kamile!
+            Su<span className={classes.highlight}>gimtadieniuu,</span>Kamile!
           </Title>
           <Text c="dimmed" mt="md">
             Linkim smagaus gimtadienio, sėkmingai pasibaigti mokslus, gerai atsipalaiduoti
