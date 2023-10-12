@@ -30,11 +30,11 @@ export function HeroBullets() {
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
-            Su <span className={classes.highlight}>gimtadieniuu,</span> Kamile!
+            Su<span className={classes.highlight}>gimtadieniuu,</span> Kamile!
           </Title>
           <Text c="dimmed" mt="md">
-            Linkim smagaus gimtadienio, gerų Kalėdų, sėkmingai pasibaigti mokslus iiiiiir laukiam
-            nesulaukiam kelionės į šiltus kraštus!
+            Linkim smagaus gimtadienio, sėkmingai pasibaigti mokslus, gerai atsipalaiduoti
+            panaudojus dovaną iiiiiir laukiam nesulaukiam kelionės į šiltus kraštus!
           </Text>
 
           <Stack mt={30} align="center">
