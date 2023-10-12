@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Image, Container, Title, Button, Text, Stack, rem } from "@mantine/core";
 import { useScrollIntoView } from "@mantine/hooks";
 import image from "/hat.jpg";
-import qr from "/qr-code.png";
+import qr from "/qr-code-tw.png";
 import classes from "./HeroBullets.module.css";
 
 export function HeroBullets() {
