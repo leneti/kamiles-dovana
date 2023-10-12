@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Image, Container, Title, Button, Text, Stack, rem } from "@mantine/core";
+import { useScrollIntoView } from "@mantine/hooks";
 import image from "/hat.jpg";
 import qr from "/qr-code.png";
 import classes from "./HeroBullets.module.css";
@@ -7,6 +8,9 @@ import classes from "./HeroBullets.module.css";
 export function HeroBullets() {
   const [answer, setAnswer] = useState("");
   const [timer, setTimer] = useState(5);
+  const { scrollIntoView, targetRef } = useScrollIntoView<HTMLImageElement>({
+    offset: 60,
+  });
 
   useEffect(() => {
     if (answer === "no" && timer > 0) {
@@ -14,6 +18,10 @@ export function HeroBullets() {
       return () => clearTimeout(id);
     } else if (answer === "no") {
       setAnswer("-yes");
+    } else {
+      scrollIntoView({
+        alignment: "end",
+      });
     }
   }, [answer, timer]);
 
@@ -67,7 +75,7 @@ export function HeroBullets() {
               target="_blank"
               href="https://www.treatwell.lt/egift-card/oT1325896172.g1.x49EB6D41.pdf?utm_source=wahanda-email&utm_medium=email&utm_campaign=wahanda-egift-card&utm_term=259d6a89-6875-458a-9f29-0fe934e3d7ee"
             >
-              <Image src={qr} className={classes.qr} />
+              <Image src={qr} className={classes.qr} ref={targetRef} />
             </a>
           </>
         )}
